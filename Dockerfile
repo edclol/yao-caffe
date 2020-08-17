@@ -13,8 +13,7 @@ RUN chmod -R 777 /tmp && \
         apt install -y apt-file && \
         apt install -y busybox && \
         pip install requests psutil py-cpuinfo pandas typing hdfs pyhdfs minio matplotlib numpy imutils sklearn \
-        -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com && \
-        pip install opencv-python  -i https://pypi.tuna.tsinghua.edu.cn/simple &&\
+        -i https://pypi.douban.com/simple --trusted-host pypi.douban.com && \
         rm -rf /var/lib/apt/lists/*
 
 ADD bootstrap.sh /etc/bootstrap.sh

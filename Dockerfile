@@ -11,6 +11,8 @@ RUN apt update && \
         apt install -y git && \
         apt install -y apt-file && \
         apt install -y busybox && \
+        pip install requests psutil py-cpuinfo pandas typing hdfs pyhdfs minio matplotlib numpy imutils opencv-python sklearn \
+        -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com && \
         rm -rf /var/lib/apt/lists/*
 
 ADD bootstrap.sh /etc/bootstrap.sh

@@ -1,5 +1,5 @@
-FROM tensorflow/tensorflow:2.2.0-gpu
-
+FROM bvlc/caffe:gpu
+cmd
 MAINTAINER edclol
 
 USER root

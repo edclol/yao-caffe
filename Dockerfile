@@ -4,11 +4,12 @@ MAINTAINER edclol
 
 USER root
 
-RUN apt update && \
+RUN chmod -R 777 /tmp && \
+        apt update && \
         echo "172.16.1.127  master" >> /etc/hosts && \
         echo "172.16.1.200  work01" >> /etc/hosts && \
         echo "172.16.1.179  work02" >> /etc/hosts && \
-        apt install -y git && \
+        apt install -y git vim && \
         apt install -y apt-file && \
         apt install -y busybox && \
         pip install requests psutil py-cpuinfo pandas typing hdfs pyhdfs minio matplotlib numpy imutils opencv-python sklearn \
